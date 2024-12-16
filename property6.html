@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spacious Office Space</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // Function to load the navbar from navbar.html
+        function loadNavbar() {
+            fetch("navbar.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("navbar-placeholder").innerHTML = data;
+                })
+                .catch(error => console.error("Error loading navbar:", error));
+        }
+
+        // Initialize the page
+        window.onload = function () {
+            loadNavbar(); // Load the navbar
+        };
+    </script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div id="navbar-placeholder"></div> <!-- Navbar will be injected here -->
+        </div>
+    </header>
+
+    <!-- Property Details Section -->
+    <section class="property-details">
+        <div class="container">
+            <h1>Spacious Office Space</h1>
+            <div class="property-images">
+                <img src="office2_spacious.jpg" alt="Spacious Office Space" class="main-image">
+                
+            </div>
+            <div class="property-info">
+                <h2>Property Overview</h2>
+                <p>
+                    This spacious office space is designed for productivity and collaboration. 
+                    Perfect for small to medium-sized businesses, it is located in a prime commercial hub with easy access to public transport.
+                </p>
+                <ul>
+                    <li><strong>Price:</strong> $800,000</li>
+                    <li><strong>Size:</strong> 3,500 sqft</li>
+                    <li><strong>Location:</strong> Business District, Main City</li>
+                    <li><strong>Type:</strong> Fully Furnished</li>
+                </ul>
+            </div>
+            <div class="property-amenities">
+                <h2>Amenities</h2>
+                <ul>
+                    <li>Fully-equipped Conference Rooms</li>
+                    <li>High-Speed Internet</li>
+                    <li>24/7 Security and CCTV</li>
+                    <li>Ample Parking Space</li>
+                    <li>Modern Pantry Area</li>
+                </ul>
+            </div>
+            <div class="contact-agent">
+                <h2>Contact Agent</h2>
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Fork & Pillow. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
